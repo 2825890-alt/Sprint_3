@@ -23,8 +23,7 @@ class OnlineSalesRegisterCollector:
                 raise NameError('Позиция отсутствует в товарном справочнике') 
             self.__name_items.append(name)
             self.__number_items += 1
-            return self.__number_items 
-
+            
     
     def delete_item_from_check(self, name):
          if name not in self.__name_items:
@@ -84,7 +83,7 @@ class OnlineSalesRegisterCollector:
     
     @staticmethod
     def get_telephone_number(telephone_number): 
-        if not isinstance(telephone_number, str):
+        if not isinstance(telephone_number, int):
             raise ValueError('Необходимо ввести цифры')  
         if len(telephone_number) > 10:
              raise ValueError('Необходимо ввести 10 цифр после "+7"')
